@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if ($count < $limit) {
-        $to = "bogdana.braichenko@web.de";
+        $to = "info@bogdanabraichenko.de";
         $subject = "New contact request from $name";
         $headers = "From: $email";
 
