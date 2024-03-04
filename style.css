@@ -330,7 +330,8 @@ section {
 
 .contact-form {
   width: 60%;
-  padding-top: 3rem;
+  padding-top: 10rem;
+  padding-bottom: 22rem;
   max-width: 600px;
 }
 
