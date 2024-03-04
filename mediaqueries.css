@@ -32,6 +32,10 @@
     .section-container {
       display: block;
     }
+    #profile {
+      height: 100vh;
+      margin-top: 70%;
+    }
     section,
     .section-container {
       height: fit-content;
@@ -44,6 +48,10 @@
       }
   }
   @media screen and (max-width: 900px) {
+    #profile {
+      height: 100vh;
+      margin-top: 70%;
+    }
     #menu-container {
         width: 70%;
     }
