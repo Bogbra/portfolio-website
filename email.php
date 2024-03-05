@@ -1,6 +1,6 @@
 <?php 
 if(isset($_POST['submit'])){
-    $to = "bogdana.braichenko@web.de"; 
+    $to = "example@example.de"; 
     $from = $_POST['email']; 
     $first_name = $_POST['name'];
     $subject = "Form submission";
