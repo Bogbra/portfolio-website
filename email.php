@@ -1,16 +1,18 @@
-<?php 
-if(isset($_POST['submit'])){
-    $to = "info@example.de";
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $name . " wrote the following:" . "\n\n" . $_POST['message'];
-  
-      if (empty($name) || empty($email) || empty($message) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        die("Invalid inputs");
-    }
+<?php
 
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    echo "Thank you " . $name . ", we will contact you shortly.";
-    }
+$subject = $_POST['name'];
+$from = $_POST['email'];
+$message = "Your MSG <br>\n";
+$to = "info@example.de";
+
+if (empty($subject) || empty($from) || empty($message)) {
+    die("Invalid inputs");
+}
+
+$headers  = "MIME-Version: 1.0\r\n";
+$headers .= "Content-type: text/html; charset=UTF-8\r\n";
+$headers .= "From: " . $from;
+
+mail($to, $subject, $message, $headers);
+echo "Mail Sent.";
+
