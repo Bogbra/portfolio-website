@@ -1,46 +1,14 @@
 <?php
 
-$errors = [];
-$errorMessage = '';
+$subject = $_POST['name'];
+$email = $_POST['email'];
+$message = "Message <br>\n";  
 
-if (!empty($_POST)) {
-   $name = $_POST['name'];
-   $email = $_POST['email'];
-   $message = $_POST['message'];
+$recipient = "example@example.com";
 
-   if (empty($name)) {
-       $errors[] = 'Name is empty';
-   }
+$header = "From: <".$email. ">" ;
 
-   if (empty($email)) {
-       $errors[] = 'Email is empty';
-   } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-       $errors[] = 'Email is invalid';
-   }
-
-   if (empty($message)) {
-       $errors[] = 'Message is empty';
-   }
-
-   if (empty($errors)) {
-       $toEmail = 'example@example.com';
-       $emailSubject = 'New email from your contact form';
-       $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=utf-8'];
-       $bodyParagraphs = ["Name: {$name}", "Email: {$email}", "Message:", $message];
-       $body = join(PHP_EOL, $bodyParagraphs);
-
-       if (mail($toEmail, $emailSubject, $body, $headers)) {
-			echo 'Thank You';
-     
-      } else {
-           $errorMessage = 'Oops, something went wrong. Please try again later';
-       }
-
-   } else {
-
-       $allErrors = join('<br/>', $errors);
-       $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
-   }
-}
+mail($recipient, $message, $header) or die("Error");
+echo "Mail Sent.";
 
 ?>
