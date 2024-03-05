@@ -1,18 +1,46 @@
-<?php 
-if(isset($_POST['submit'])){
-    $to = "example@example.de"; 
-    $from = $_POST['email']; 
-    $name = $_POST['name'];
-    $subject = "Form submission";
-    $subject2 = "Copy of your form submission";
-    $message = $name . " wrote the following:" . "\n\n" . $_POST['message'];
-    $message2 = "Here is a copy of your message " . $name . "\n\n" . $_POST['message'];
+<?php
 
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2);
-    echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
-    }
+$errors = [];
+$errorMessage = '';
+
+if (!empty($_POST)) {
+   $name = $_POST['name'];
+   $email = $_POST['email'];
+   $message = $_POST['message'];
+
+   if (empty($name)) {
+       $errors[] = 'Name is empty';
+   }
+
+   if (empty($email)) {
+       $errors[] = 'Email is empty';
+   } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+       $errors[] = 'Email is invalid';
+   }
+
+   if (empty($message)) {
+       $errors[] = 'Message is empty';
+   }
+
+   if (empty($errors)) {
+       $toEmail = 'example@example.com';
+       $emailSubject = 'New email from your contact form';
+       $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=utf-8'];
+       $bodyParagraphs = ["Name: {$name}", "Email: {$email}", "Message:", $message];
+       $body = join(PHP_EOL, $bodyParagraphs);
+
+       if (mail($toEmail, $emailSubject, $body, $headers)) {
+			echo 'Thank You';
+     
+      } else {
+           $errorMessage = 'Oops, something went wrong. Please try again later';
+       }
+
+   } else {
+
+       $allErrors = join('<br/>', $errors);
+       $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
+   }
+}
+
 ?>
-
