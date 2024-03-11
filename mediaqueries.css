@@ -1,13 +1,15 @@
+
 @media screen and (max-width: 1400px) {
-    #profile {
-      height: 100vh;
-      margin-bottom: 6rem;
-    }
     .about-containers {
         flex-wrap: wrap;
       }
     .skills-containers {
       flex-wrap: wrap;
+    }
+    #profile {
+      height: 100vh;
+      padding: 0;
+      margin: 0;
     }
     #contact {
       height: fit-content;
@@ -22,42 +24,52 @@
         top: 0;
         margin: 0;
     }
+    #profile {
+      height: 100vh;
+      padding: 0;
+      margin: 0 auto;
+    }
     #desktop-nav li:not(:last-child) {
       display: none;
     }
     #hamburger-nav {
       display: flex;
     }
-    #profile,
-    .section-container {
-      display: block;
-    }
-    #profile {
-      height: 100vh;
-      margin-top: 70%;
-    }
-    section,
     .section-container {
       height: fit-content;
     }
     section {
-      margin: 0 5%;
+      height: 100vh;
+      margin: 0 4rem;
     }
     .about-containers {
         margin-top: 0;
       }
   }
   @media screen and (max-width: 900px) {
-    #profile {
-      height: 100vh;
-      margin-top: 70%;
-    }
+
     #menu-container {
         width: 70%;
+    }
+    #profile {
+      height: 100vh;
+      padding: 0;
+      margin: 0 auto;
     }
     .icon {
         width: 2rem; 
         margin-right: 10px;
+      }
+      #resume {
+
+        scroll-margin-top: -3rem;
+      }
+      #contact {
+        height: 100vh;
+        scroll-margin-top: 1rem;
+      }
+      section {
+    margin: 0 2rem;
       }
   }
   
@@ -65,26 +77,32 @@
     #currentDateTime{
       display: none;
     }
+    #profile {
+      height: 100vh;
+      padding: 0;
+      margin: 0 auto;
+    }
+    #contact {
+      height: 100vh;
+      scroll-margin-top: .5rem;
+    }
     #menu-container {
         width: 50%;
+        padding: 0 1rem;
     }
     .header-container{
       position: fixed;
       top: 0;
     }
-    .logo {
+    h1 .logo {
         padding-left: 3.5rem;
         font-size: 3rem;
     }
+    .title{
+      font-size: 3rem;
+    }
     .hamburger-icon {
         margin-bottom: 10%;
-    }
-    .btn {
-        width: 6rem;
-      } 
-    #profile {
-      height: 100vh;
-      margin-top: 70%;
     }
     .skills-containers {
         flex-wrap: nowrap;
@@ -106,6 +124,12 @@
       gap: 0.5rem;
       text-align: center;
     }
+    td{
+      font-size: .8rem;
+    }
+    section {
+      margin: 0 .5rem;
+      }
     .section-pic-container {
       width: 300px;
       height: 300px;
