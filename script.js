@@ -3,6 +3,7 @@ let headerContainer = document.querySelector('.header-container');
 let isHeaderVisible = false;
 let profile = document.querySelector('#profile');
 let isProfileVisible = true;
+let homeLink = document.querySelector('a[href="#profile"]');
 
 window.addEventListener('scroll', function() {
     let currentScroll = window.scrollY;
@@ -24,6 +25,11 @@ window.addEventListener('scroll', function() {
         isProfileVisible = true;
     }
 });
+
+homeLink.addEventListener('click', function (event) {
+    headerContainer.classList.remove('visible');
+    profile.classList.add('visible');
+}); 
 
 function updateDateTime() {
     let currentDate = new Date();

@@ -1,14 +1,13 @@
 <?php
 
-$subject = $_POST['name'];
+$name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];  
 
 $recipient = "example@example.com";
 
-$header = "From: <".$email. ">" ;
+$header = "From: $name\n E-Mail: $email\n Message:\n $message";
 
-mail($recipient, $message, $header) or die("Error");
+mail($recipient, $message, $header);
 echo "Mail Sent.";
 
-?>

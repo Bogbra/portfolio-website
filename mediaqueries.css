@@ -62,6 +62,9 @@
   }
   
   @media screen and (max-width: 600px) {
+    #currentDateTime{
+      display: none;
+    }
     #menu-container {
         width: 50%;
     }
@@ -71,6 +74,7 @@
     }
     .logo {
         padding-left: 3.5rem;
+        font-size: 3rem;
     }
     .hamburger-icon {
         margin-bottom: 10%;
@@ -87,7 +91,7 @@
         overflow-x: auto;
       }
       .icon {
-        width: 1.3rem; 
+        width: 1.5rem; 
         margin-right: 5px;
       }
     .about-containers, 
@@ -101,6 +105,10 @@
       flex-direction: column;
       gap: 0.5rem;
       text-align: center;
+    }
+    .section-pic-container {
+      width: 300px;
+      height: 300px;
     }
     .section-text-p {
       font-size: 1.25rem;
