@@ -111,6 +111,14 @@ a,
   display: block;
 }
 
+.avatar-container img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: grey;
+  cursor: pointer;
+}
+
 .dropdown-menu h3 {
   margin-top: 3.5rem;
   color: whitesmoke;
@@ -128,14 +136,13 @@ a,
 .dropdown-menu img:hover{
   background-color: whitesmoke;
   transition: all 500ms ease;
+  padding: 0;
 }
 
-.avatar-container img {
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-  background-color: grey;
-  cursor: pointer;
+.dropdown-menu a:hover{
+  text-decoration: none;
+  padding: 0;
+
 }
 
 #currentDateTime {
@@ -271,10 +278,11 @@ section {
 }
 .details-row {
   display: none;
-  background-color: whitesmoke;
+  background-color: white;
 }
 .details {
   list-style-type: "- ";
+  padding: .5rem;
 }
 .details li{
   margin-bottom: .5rem;
@@ -358,10 +366,12 @@ textarea {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
 }
+
 nav,
 .nav-links {
   display: flex;
 }
+
 nav {
   justify-content: space-around;
   align-items: center;
@@ -385,18 +395,18 @@ nav {
   border-radius: 3rem;
 }
 
-a {
+.nav-links a {
   color: rgb(50, 50, 50);
   text-decoration: none;
   padding: 1rem;
   border-radius: 3rem;
 }
 
-a:hover {
+.nav-links a:hover {
   background-color: darkgrey;
 }
 
-a:focus {
+.nav-links a:focus {
   background-color: rgb(100, 100, 100);
 }
 
