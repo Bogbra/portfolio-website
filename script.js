@@ -45,6 +45,18 @@ updateDateTime();
 
 setInterval(updateDateTime, 60000);
 
+let table = document.querySelector(".minimalist-table");
+let rows = table.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
+
+for (let i = 0; i < rows.length; i += 2) {
+    rows[i].addEventListener("click", function () {
+        let nextRow = this.nextElementSibling;
+        if (nextRow && nextRow.classList.contains("details-row")) {
+            nextRow.classList.toggle("show-details");
+        }
+    });
+}
+
  function toggleMenu(){
     let icon = document.querySelector('.hamburger-icon');
     let menu = document.querySelector('.menu-links');
