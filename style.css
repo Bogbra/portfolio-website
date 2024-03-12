@@ -13,6 +13,8 @@ body {
   max-width: 1200px;
 }
 
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -42,6 +44,37 @@ a,
   filter: blur(0);
   transform: translateX(0);
 }
+
+/* follower */
+
+#follower {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease-out;
+  border-bottom: 5px solid rgb(50,50,50);
+}
+
+#follower::before,
+#follower::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(50,50,50);
+  border-radius: 50%;
+  top: 30%; 
+  left: 20%;
+}
+
+#follower::after {
+  left: 60%; 
+}
+
 
 /* header container */
 
@@ -138,11 +171,9 @@ a,
   transition: all 500ms ease;
   padding: 0;
 }
-
-.dropdown-menu a:hover{
+.github:hover {
+  background-color: transparent;
   text-decoration: none;
-  padding: 0;
-
 }
 
 #currentDateTime {
@@ -255,7 +286,7 @@ section {
 #resume {
   padding: 4rem 0;
   height: fit-content;
-  scroll-margin-top: 1rem;
+  scroll-margin-top: -3rem;
 }
 .table-container {
   overflow-x: auto;
@@ -304,8 +335,8 @@ section {
   scroll-margin-top: 1rem;
 }
 .skill img {
-  height: 4rem;
-  padding: .5rem;
+  height: 5rem;
+  padding: 1rem;
 }
 .skill:nth-child(n) {
   transition-delay: calc(100ms * (n - 1));
@@ -395,18 +426,18 @@ nav {
   border-radius: 3rem;
 }
 
-.nav-links a {
+ a {
   color: rgb(50, 50, 50);
   text-decoration: none;
   padding: 1rem;
   border-radius: 3rem;
 }
 
-.nav-links a:hover {
+ a:hover {
   background-color: darkgrey;
 }
 
-.nav-links a:focus {
+ a:focus {
   background-color: rgb(100, 100, 100);
 }
 

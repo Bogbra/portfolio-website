@@ -1,145 +1,144 @@
 
 @media screen and (max-width: 1400px) {
-    .about-containers {
-        flex-wrap: wrap;
-      }
-    .skills-containers {
+  .about-containers {
       flex-wrap: wrap;
     }
-    #profile {
-      height: 100vh;
-      padding: 0;
-      margin: 0;
-    }
-    #contact {
-      height: fit-content;
-    }
+  .skills-containers {
+    flex-wrap: wrap;
   }
+  #profile {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
+  #contact {
+    height: fit-content;
+  }
+}
   
-  @media screen and (max-width: 1200px) {
-    .header-container {
-        width: 100%; 
-        max-width: 1200px; 
-        position: fixed;
-        top: 0;
-        margin: 0;
-    }
-    #profile {
-      height: 100vh;
-      padding: 0;
-      margin: 0 auto;
-    }
-    #desktop-nav li:not(:last-child) {
-      display: none;
-    }
-    #hamburger-nav {
-      display: flex;
-    }
-    .section-container {
-      height: fit-content;
-    }
-    section {
-      margin: 0 4rem;
-    }
-    .about-containers {
-        margin-top: 0;
-      }
+@media screen and (max-width: 1200px) {
+  .header-container {
+    width: 100%; 
+    max-width: 1200px; 
+    position: fixed;
+    top: 0;
+    margin: 0;
   }
-  @media screen and (max-width: 900px) {
+  #profile {
+    height: 100vh;
+    padding: 0;
+    margin: 0 auto;
+  }
+  #desktop-nav li:not(:last-child) {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  .skill img{
+    height: 4rem;
+    padding: 1rem;
+  }
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 4rem;
+  }
+  .about-containers {
+      margin-top: 0;
+  }
+}
 
-    #menu-container {
-        width: 70%;
-    }
-      #profile {
-        height: 100vh;
-        padding: 0;
-        margin: 0 auto;
-      }
-        #resume {
-          scroll-margin-top: -3rem;
-        }
-        .skill img{
-          height: 3rem;
-          padding: .5rem;
-        }
-        #contact {
-          margin-bottom: 3rem;
-          scroll-margin-top: 1rem;
-        }
-        section {
-          margin: 0 2rem;
-        }
+@media screen and (max-width: 900px) {
+  #menu-container {
+      width: 70%;
   }
+  #profile {
+    height: 100vh;
+    padding: 0;
+    margin: 0 auto;
+  }
+  #resume {
+    scroll-margin-top: -3rem;
+  }
+  .skill img{
+    height: 3rem;
+    padding: .5rem;
+  }
+  #contact {
+    margin-bottom: 3rem;
+    scroll-margin-top: 1rem;
+  }
+  section {
+    margin: 0 2rem;
+  }
+}
   
-  @media screen and (max-width: 600px) {
-    #currentDateTime{
-      display: none;
-    }
-    #profile {
-      height: 100vh;
-      padding: 0;
-      margin: 0 auto;
-    }
-    #menu-container {
-        width: 50%;
-        padding: 0 1rem;
-    }
-    #contact {
-      margin-bottom: 3rem;
-    }
-
-    .header-container{
-      position: fixed;
-      top: 0;
-    }
-    .logo {
-        padding-left: 3.5rem;
-        font-size: 3rem;
-    }
-    .title{
-      font-size: 3rem;
-    }
-    .hamburger-icon {
-        margin-bottom: 10%;
-    }
-      .skill img{
-        height: 2rem;
-        padding: .2rem;
-      }
-    .about-containers, 
-    .btn-container {
-      flex-wrap: wrap;
-    }
-    .nav-links li a {
-      font-size: 1rem;
-    }
-    .nav-links {
-      flex-direction: column;
-      gap: 0.5rem;
-      text-align: center;
-    }
-    td{
-      font-size: .8rem;
-    }
-    section {
-      margin: 0 .5rem;
-      }
-    .section-pic-container {
-      width: 300px;
-      height: 300px;
-    }
-    .section-text-p {
-      font-size: 1.25rem;
-    }
-    .title {
-      font-size: 3rem;
-    }
-    .text-container {
-      text-align: justify;
-    }
-    .contact-form {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-    }
+@media screen and (max-width: 600px) {
+  #currentDateTime{
+    display: none;
   }
+  #profile {
+    height: 100vh;
+    padding: 0;
+    margin: 0 auto;
+  }
+  #menu-container {
+    width: 50%;
+    padding: 0 1rem;
+  }
+  #contact {
+    margin-bottom: 3rem;
+  }
+  .header-container{
+    position: fixed;
+    top: 0;
+  }
+  .logo {
+    padding-left: 3.5rem;
+    font-size: 3rem;
+  }
+  .title{
+    font-size: 3rem;
+  }
+  .hamburger-icon {
+    margin-bottom: 10%;
+  }
+  .skill img{
+    height: 2rem;
+    padding: .2rem;
+  }
+  .about-containers, 
+  .btn-container {
+    flex-wrap: wrap;
+  }
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  td{
+    font-size: .8rem;
+  }
+  section {
+    margin: 0 .5rem;
+  }
+  .section-text-p {
+    font-size: 1.25rem;
+  }
+  .title {
+    font-size: 3rem;
+  }
+  .text-container {
+    text-align: justify;
+  }
+  .contact-form {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+}
