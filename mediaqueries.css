@@ -39,7 +39,6 @@
       height: fit-content;
     }
     section {
-      height: 100vh;
       margin: 0 4rem;
     }
     .about-containers {
@@ -51,28 +50,25 @@
     #menu-container {
         width: 70%;
     }
-    #profile {
-      height: 100vh;
-      padding: 0;
-      margin: 0 auto;
-    }
-
-      #resume {
-        padding: 4rem 0;
-        scroll-margin-top: -3rem;
-      }
-      .skill img{
-        height: 3rem;
-        padding: .5rem;
-      }
-      #contact {
+      #profile {
         height: 100vh;
-        scroll-margin-top: 1rem;
+        padding: 0;
+        margin: 0 auto;
       }
-      section {
-        height: 100vh;
-    margin: 0 2rem;
-      }
+        #resume {
+          scroll-margin-top: -3rem;
+        }
+        .skill img{
+          height: 3rem;
+          padding: .5rem;
+        }
+        #contact {
+          margin-bottom: 3rem;
+          scroll-margin-top: 1rem;
+        }
+        section {
+          margin: 0 2rem;
+        }
   }
   
   @media screen and (max-width: 600px) {
@@ -84,17 +80,14 @@
       padding: 0;
       margin: 0 auto;
     }
-    #resume {
-      padding: 0;
-    }
-    #contact {
-      height: 100vh;
-      scroll-margin-top: .5rem;
-    }
     #menu-container {
         width: 50%;
         padding: 0 1rem;
     }
+    #contact {
+      margin-bottom: 3rem;
+    }
+
     .header-container{
       position: fixed;
       top: 0;
@@ -145,6 +138,8 @@
       text-align: justify;
     }
     .contact-form {
-      width: 80%;
+      margin: 0;
+      padding: 0;
+      width: 100%;
     }
   }

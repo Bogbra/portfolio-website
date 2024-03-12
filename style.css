@@ -13,7 +13,6 @@ body {
   max-width: 1200px;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -147,7 +146,6 @@ a,
 /* sections */
 
 section {
-  height: 100vh;
   box-sizing: border-box;
   min-height: fit-content;
   }
@@ -160,6 +158,7 @@ section {
 /* profile section */
 
 #profile {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -225,6 +224,7 @@ section {
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
+
 }
   
 .about-details-container {
@@ -236,7 +236,7 @@ section {
 .about-details-container {
   display: flex;
 }
-  
+
 .section-pic-container {
   height: 300px;
   width: 300px;
@@ -306,10 +306,11 @@ section {
 /* contact */
 
 #contact {
-height: 100vh;
 scroll-margin-top: 1rem;
 }
 .contact-container {
+  height: 100vh;
+  max-width: 70%;
   margin: 0 auto; 
   display: flex;
   flex-direction: column; 
