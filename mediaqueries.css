@@ -56,19 +56,21 @@
       padding: 0;
       margin: 0 auto;
     }
-    .icon {
-        width: 2rem; 
-        margin-right: 10px;
-      }
-      #resume {
 
+      #resume {
+        padding: 4rem 0;
         scroll-margin-top: -3rem;
+      }
+      .skill img{
+        height: 3rem;
+        padding: .5rem;
       }
       #contact {
         height: 100vh;
         scroll-margin-top: 1rem;
       }
       section {
+        height: 100vh;
     margin: 0 2rem;
       }
   }
@@ -82,6 +84,9 @@
       padding: 0;
       margin: 0 auto;
     }
+    #resume {
+      padding: 0;
+    }
     #contact {
       height: 100vh;
       scroll-margin-top: .5rem;
@@ -94,7 +99,7 @@
       position: fixed;
       top: 0;
     }
-    h1 .logo {
+    .logo {
         padding-left: 3.5rem;
         font-size: 3rem;
     }
@@ -104,13 +109,9 @@
     .hamburger-icon {
         margin-bottom: 10%;
     }
-    .skills-containers {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-      }
-      .icon {
-        width: 1.5rem; 
-        margin-right: 5px;
+      .skill img{
+        height: 2rem;
+        padding: .2rem;
       }
     .about-containers, 
     .btn-container {

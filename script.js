@@ -45,6 +45,22 @@ updateDateTime();
 
 setInterval(updateDateTime, 60000);
 
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+if(entry.isIntersecting) {
+        entry.target.classList.add('show');
+        }else{
+        entry.target.classList.remove('show');
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll('.hide');
+hiddenElements.forEach((el) => observer.observe(el));
+
+
+
 let table = document.querySelector(".minimalist-table");
 let rows = table.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
 
