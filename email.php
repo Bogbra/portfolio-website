@@ -9,5 +9,5 @@ $recipient = "example@example.com";
 $header = "From: $name\n E-Mail: $email\n Message:\n $message";
 
 mail($recipient, $message, $header);
-echo "Mail Sent.";
-
+header("Location: thankyou.html");
+exit;
