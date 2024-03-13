@@ -36,7 +36,7 @@ a,
   opacity: 0;
   filter: blur(5px);
   transform: translateX(-100%);
-  transition: all 2s;
+  transition: all 1s;
 }
 
 .show {
@@ -46,7 +46,6 @@ a,
 }
 
 /* follower */
-
 #follower {
   position: absolute;
   width: 50px;
@@ -54,9 +53,7 @@ a,
   background-color: whitesmoke;
   border-radius: 50%;
   pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: transform 0.2s ease-out;
-  border-bottom: 5px solid rgb(50,50,50);
+  border-bottom: 5px solid rgb(50, 50, 50);
 }
 
 #follower::before,
@@ -65,7 +62,7 @@ a,
   position: absolute;
   width: 10px;
   height: 10px;
-  background-color: rgb(50,50,50);
+  background-color: rgb(50, 50, 50);
   border-radius: 50%;
   top: 30%; 
   left: 20%;
@@ -338,9 +335,46 @@ section {
   height: 5rem;
   padding: 1rem;
 }
-.skill:nth-child(n) {
-  transition-delay: calc(100ms * (n - 1));
+
+.skill:nth-child(2) {
+  transition-delay: 100ms;
 }
+
+.skill:nth-child(3) {
+  transition-delay: 200ms;
+}
+
+.skill:nth-child(4) {
+  transition-delay: 300ms;
+}
+
+.skill:nth-child(5) {
+  transition-delay: 400ms;
+}
+
+.skill:nth-child(6) {
+  transition-delay: 500ms;
+}
+
+.skill:nth-child(7) {
+  transition-delay: 600ms;
+}
+
+.skill:nth-child(8) {
+  transition-delay: 700ms;
+}
+
+.skill:nth-child(9) {
+  transition-delay: 800ms;
+}
+
+.skill:nth-child(10) {
+  transition-delay: 900ms;
+}
+
+/* .skill:nth-child(n) {
+  transition-delay: calc(100ms * (n - 1));
+} */
 
 /* contact */
 

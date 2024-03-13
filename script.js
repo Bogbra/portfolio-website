@@ -2,10 +2,10 @@ document.addEventListener('mousemove', (e) => {
     const cursorFollower = document.getElementById('follower');
     const x = e.clientX;
     const y = e.clientY;
-  
+
     const scrollX = window.scrollX || window.pageXOffset;
     const scrollY = window.scrollY || window.pageYOffset;
-  
+
     cursorFollower.style.transform = `translate(${x + scrollX}px, ${y + scrollY}px)`;
   });
 
